@@ -1,0 +1,78 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Welcome to 'A Journey Through Your Choices'");
+        Console.Write("Before we begin, what is your name? ");
+        string playerName = Console.ReadLine();
+        Console.WriteLine($"Nice to meet you, {playerName}! Let us dive into your journey.\n");
+
+        Console.WriteLine($"Tell me, {playerName}, do you enjoy your current work or studies?");
+        Console.WriteLine("A) Yes, I love what I do.");
+        Console.WriteLine("B) No, I'd rather be doing something else.");
+        Console.Write("Your choice (A/B): ");
+        string choice1 = Console.ReadLine().ToUpper();
+
+        if (choice1 == "A")
+        {
+            Console.WriteLine("\nThat's great to hear! What motivates you the most in your work or studies?");
+            Console.WriteLine("A) Achieving personal growth and learning new skills.");
+            Console.WriteLine("B) The sense of accomplishment and recognition.");
+            Console.Write("Your choice (A/B): ");
+        }
+        else if (choice1 == "B")
+        {
+            Console.WriteLine("\nI see. If you could switch to a different path, what would you prefer?");
+            Console.WriteLine("A) A creative field like art or writing.");
+            Console.WriteLine("B) A technical or problem-solving career.");
+            Console.Write("Your choice (A/B): ");
+        }
+        string choice2 = Console.ReadLine().ToUpper();
+
+        Console.WriteLine("\nWhen it comes to spending your free time, what do you prefer?");
+        Console.WriteLine("A) Being with friends or family.");
+        Console.WriteLine("B) Enjoying some time alone, doing your favorite activities.");
+        Console.Write("Your choice (A/B): ");
+        string choice3 = Console.ReadLine().ToUpper();
+
+        Console.WriteLine("\nLastly, how would you describe your approach to challenges?");
+        Console.WriteLine("A) I tackle them head-on, no matter how tough.");
+        Console.WriteLine("B) I take my time to plan and strategize before acting.");
+        Console.Write("Your choice (A/B): ");
+        string choice4 = Console.ReadLine().ToUpper();
+
+        Console.WriteLine("\n--- Reflection ---");
+        Console.WriteLine($"Thank you for sharing, {playerName}. Here's a little insight into you:");
+
+        if (choice1 == "A" && choice2 == "A")
+        {
+            Console.WriteLine("You're driven by a desire to grow and learn, finding joy in progress.");
+        }
+        else if (choice1 == "B" && choice2 == "B")
+        {
+            Console.WriteLine("You seek fulfillment in challenging and creative pursuits.");
+        }
+
+        if (choice3 == "A")
+        {
+            Console.WriteLine("You're energized by social connections and value meaningful relationships.");
+        }
+        else if (choice3 == "B")
+        {
+            Console.WriteLine("You cherish your solitude and find peace in your personal passions.");
+        }
+
+        if (choice4 == "A")
+        {
+            Console.WriteLine("You're fearless and ready to face any challenge without hesitation.");
+        }
+        else if (choice4 == "B")
+        {
+            Console.WriteLine("Your strategic thinking helps you tackle problems with precision and care.");
+        }
+
+        Console.WriteLine("\nThank you for playing! Remember, your choices make you unique.");
+    }
+}
